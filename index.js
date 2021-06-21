@@ -40,6 +40,6 @@ const temp = (req, res) => {
 app.get("/products", getProducts);
 app.post("/test", temp);
 
-app.listen(portID, () => {
+app.listen(process.env.PORT || portID, () => {
   console.log("listening to port " + portID);
 });
